@@ -1,0 +1,33 @@
+/*
+CS181 - Spring 2017
+Lab 3
+Kaleb Duke
+9/13/17
+This Program recieves 3 inputs from a user, 1 to recieved wager amount, the other two as odds against the gambler. 
+The program takes this information and calculates the odds of winning the the resulting possible winning amount .*/
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int x, y;
+	double moneyEarned, moneyWagered;
+
+	cout << "Please input values for odds X to Y." << endl;
+	cout << "Enter value for X: ";
+		cin >> x;
+	cout << "Enter value for Y: ";
+		cin >> y;
+	cout << "Enter amount Wagered: ";
+		cin >> moneyWagered;
+
+	moneyEarned = moneyWagered + ((x * moneyWagered))/y;
+
+	cout << setprecision(2) << fixed;
+	cout << "For a wager of $" << moneyWagered << " with odds of " << x << " to " << y << endl;
+	cout << "You would win $" << moneyEarned << "! Good Luck!";
+	return 0;
+} 
